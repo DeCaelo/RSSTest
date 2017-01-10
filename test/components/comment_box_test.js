@@ -26,11 +26,12 @@ describe('CommentBox' , () => {
     });
 
     it('show text that in the textarea', () => {
-      expect(component.find('button')).to.exist;
+      expect(component.find('textarea')).to.have.value('new comment');
     });
 
     it('when submitted, clears the input', () => {
-      expect(component.find('button')).to.exist;
+      component.simulate('submit');
+      expect(component.find('textarea')).to.have.value('');
     });
   });
 });
