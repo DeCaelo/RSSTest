@@ -11,8 +11,8 @@ describe('App' , () => {
   });
 
 // Use 'it' to test a single attribute of a target
-  it('shows the correct text', () => {
+  it('shows a comment box', () => {
     // Use 'expect' to make an 'assertion' about a target
-    expect(component).to.contain('React simple starter');
+    expect(component.find('.comment-box')).to.exist;
   });
 });
